@@ -4,7 +4,7 @@ import requests
 
 # Cria uma chamada de API e verifica a resposta
 url = "https://api.github.com/search/repositories"
-url += f"?q=language:python+sort:stars+stars:>{10_000}"
+url += f"?q=language:go+sort:stars+stars:>{10_000}"
 
 headers = {"Accept": "application/vnd.github.v3+json"}
 try:
@@ -43,4 +43,5 @@ else:
     fig.update_layout(title_font_size=28, xaxis_title_font_size=20,
                       yaxis_title_font_size=20)
 
+    fig.update_traces(marker_color='SteelBlue', marker_opacity=0.6)
     fig.show()
